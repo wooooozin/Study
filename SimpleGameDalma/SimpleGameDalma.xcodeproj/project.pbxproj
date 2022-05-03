@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36C716AA28218BBA00305FE0 /* falsebtn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A428218BBA00305FE0 /* falsebtn.mp3 */; };
+		36C716AB28218BBA00305FE0 /* gamebgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A528218BBA00305FE0 /* gamebgm.mp3 */; };
+		36C716AC28218BBA00305FE0 /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A628218BBA00305FE0 /* pause.mp3 */; };
+		36C716AD28218BBA00305FE0 /* mainbgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A728218BBA00305FE0 /* mainbgm.mp3 */; };
+		36C716AE28218BBA00305FE0 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A828218BBA00305FE0 /* gameover.mp3 */; };
+		36C716AF28218BBA00305FE0 /* truebtn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A928218BBA00305FE0 /* truebtn.mp3 */; };
+		36C716B22821952D00305FE0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C716B02821952D00305FE0 /* GameViewController.swift */; };
+		36C716B32821952D00305FE0 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C716B12821952D00305FE0 /* GameViewController.xib */; };
+		36C716B82821A35E00305FE0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C716B72821A35E00305FE0 /* Model.swift */; };
+		36E05EA228214A770025E49C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EA128214A770025E49C /* AppDelegate.swift */; };
+		36E05EA428214A770025E49C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EA328214A770025E49C /* SceneDelegate.swift */; };
+		36E05EA628214A770025E49C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EA528214A770025E49C /* ViewController.swift */; };
+		36E05EA928214A770025E49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E05EA728214A770025E49C /* Main.storyboard */; };
+		36E05EAC28214A770025E49C /* SimpleGameDalma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EAA28214A770025E49C /* SimpleGameDalma.xcdatamodeld */; };
+		36E05EAE28214A780025E49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E05EAD28214A780025E49C /* Assets.xcassets */; };
+		36E05EB128214A780025E49C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E05EAF28214A780025E49C /* LaunchScreen.storyboard */; };
+		36E05EBC28214A790025E49C /* SimpleGameDalmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EBB28214A790025E49C /* SimpleGameDalmaTests.swift */; };
+		36E05EC628214A790025E49C /* SimpleGameDalmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EC528214A790025E49C /* SimpleGameDalmaUITests.swift */; };
+		36E05EC828214A790025E49C /* SimpleGameDalmaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EC728214A790025E49C /* SimpleGameDalmaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36E05EB828214A790025E49C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36E05E9628214A770025E49C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36E05E9D28214A770025E49C;
+			remoteInfo = SimpleGameDalma;
+		};
+		36E05EC228214A790025E49C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36E05E9628214A770025E49C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36E05E9D28214A770025E49C;
+			remoteInfo = SimpleGameDalma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36C716A428218BBA00305FE0 /* falsebtn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = falsebtn.mp3; sourceTree = "<group>"; };
+		36C716A528218BBA00305FE0 /* gamebgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gamebgm.mp3; sourceTree = "<group>"; };
+		36C716A628218BBA00305FE0 /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pause.mp3; sourceTree = "<group>"; };
+		36C716A728218BBA00305FE0 /* mainbgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mainbgm.mp3; sourceTree = "<group>"; };
+		36C716A828218BBA00305FE0 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
+		36C716A928218BBA00305FE0 /* truebtn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = truebtn.mp3; sourceTree = "<group>"; };
+		36C716B02821952D00305FE0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		36C716B12821952D00305FE0 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		36C716B72821A35E00305FE0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		36E05E9E28214A770025E49C /* SimpleGameDalma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGameDalma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E05EA128214A770025E49C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36E05EA328214A770025E49C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36E05EA528214A770025E49C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36E05EA828214A770025E49C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36E05EAB28214A770025E49C /* SimpleGameDalma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleGameDalma.xcdatamodel; sourceTree = "<group>"; };
+		36E05EAD28214A780025E49C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36E05EB028214A780025E49C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36E05EB228214A780025E49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E05EB728214A790025E49C /* SimpleGameDalmaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGameDalmaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E05EBB28214A790025E49C /* SimpleGameDalmaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGameDalmaTests.swift; sourceTree = "<group>"; };
+		36E05EC128214A790025E49C /* SimpleGameDalmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGameDalmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E05EC528214A790025E49C /* SimpleGameDalmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGameDalmaUITests.swift; sourceTree = "<group>"; };
+		36E05EC728214A790025E49C /* SimpleGameDalmaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGameDalmaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36E05E9B28214A770025E49C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E05EB428214A790025E49C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E05EBE28214A790025E49C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36C716A328217CF300305FE0 /* bgm */ = {
+			isa = PBXGroup;
+			children = (
+				36C716A428218BBA00305FE0 /* falsebtn.mp3 */,
+				36C716A528218BBA00305FE0 /* gamebgm.mp3 */,
+				36C716A828218BBA00305FE0 /* gameover.mp3 */,
+				36C716A728218BBA00305FE0 /* mainbgm.mp3 */,
+				36C716A628218BBA00305FE0 /* pause.mp3 */,
+				36C716A928218BBA00305FE0 /* truebtn.mp3 */,
+			);
+			path = bgm;
+			sourceTree = "<group>";
+		};
+		36C716B42821A03A00305FE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36C716B72821A35E00305FE0 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36E05E9528214A770025E49C = {
+			isa = PBXGroup;
+			children = (
+				36E05EBA28214A790025E49C /* SimpleGameDalmaTests */,
+				36E05EC428214A790025E49C /* SimpleGameDalmaUITests */,
+				36C716A328217CF300305FE0 /* bgm */,
+				36E05EA028214A770025E49C /* SimpleGameDalma */,
+				36E05ED428214BED0025E49C /* main */,
+				36E05ED528214BFE0025E49C /* GameDatail */,
+				36C716B42821A03A00305FE0 /* Model */,
+				36E05E9F28214A770025E49C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36E05E9F28214A770025E49C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36E05E9E28214A770025E49C /* SimpleGameDalma.app */,
+				36E05EB728214A790025E49C /* SimpleGameDalmaTests.xctest */,
+				36E05EC128214A790025E49C /* SimpleGameDalmaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36E05EA028214A770025E49C /* SimpleGameDalma */ = {
+			isa = PBXGroup;
+			children = (
+				36E05EA128214A770025E49C /* AppDelegate.swift */,
+				36E05EA328214A770025E49C /* SceneDelegate.swift */,
+				36E05EAD28214A780025E49C /* Assets.xcassets */,
+				36E05EB228214A780025E49C /* Info.plist */,
+				36E05EAA28214A770025E49C /* SimpleGameDalma.xcdatamodeld */,
+				36E05EAF28214A780025E49C /* LaunchScreen.storyboard */,
+			);
+			path = SimpleGameDalma;
+			sourceTree = "<group>";
+		};
+		36E05EBA28214A790025E49C /* SimpleGameDalmaTests */ = {
+			isa = PBXGroup;
+			children = (
+				36E05EBB28214A790025E49C /* SimpleGameDalmaTests.swift */,
+			);
+			path = SimpleGameDalmaTests;
+			sourceTree = "<group>";
+		};
+		36E05EC428214A790025E49C /* SimpleGameDalmaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				36E05EC528214A790025E49C /* SimpleGameDalmaUITests.swift */,
+				36E05EC728214A790025E49C /* SimpleGameDalmaUITestsLaunchTests.swift */,
+			);
+			path = SimpleGameDalmaUITests;
+			sourceTree = "<group>";
+		};
+		36E05ED428214BED0025E49C /* main */ = {
+			isa = PBXGroup;
+			children = (
+				36E05EA528214A770025E49C /* ViewController.swift */,
+				36E05EA728214A770025E49C /* Main.storyboard */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		36E05ED528214BFE0025E49C /* GameDatail */ = {
+			isa = PBXGroup;
+			children = (
+				36C716B02821952D00305FE0 /* GameViewController.swift */,
+				36C716B12821952D00305FE0 /* GameViewController.xib */,
+			);
+			path = GameDatail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36E05E9D28214A770025E49C /* SimpleGameDalma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E05ECB28214A790025E49C /* Build configuration list for PBXNativeTarget "SimpleGameDalma" */;
+			buildPhases = (
+				36E05E9A28214A770025E49C /* Sources */,
+				36E05E9B28214A770025E49C /* Frameworks */,
+				36E05E9C28214A770025E49C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleGameDalma;
+			productName = SimpleGameDalma;
+			productReference = 36E05E9E28214A770025E49C /* SimpleGameDalma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36E05EB628214A790025E49C /* SimpleGameDalmaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E05ECE28214A790025E49C /* Build configuration list for PBXNativeTarget "SimpleGameDalmaTests" */;
+			buildPhases = (
+				36E05EB328214A790025E49C /* Sources */,
+				36E05EB428214A790025E49C /* Frameworks */,
+				36E05EB528214A790025E49C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36E05EB928214A790025E49C /* PBXTargetDependency */,
+			);
+			name = SimpleGameDalmaTests;
+			productName = SimpleGameDalmaTests;
+			productReference = 36E05EB728214A790025E49C /* SimpleGameDalmaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		36E05EC028214A790025E49C /* SimpleGameDalmaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E05ED128214A790025E49C /* Build configuration list for PBXNativeTarget "SimpleGameDalmaUITests" */;
+			buildPhases = (
+				36E05EBD28214A790025E49C /* Sources */,
+				36E05EBE28214A790025E49C /* Frameworks */,
+				36E05EBF28214A790025E49C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36E05EC328214A790025E49C /* PBXTargetDependency */,
+			);
+			name = SimpleGameDalmaUITests;
+			productName = SimpleGameDalmaUITests;
+			productReference = 36E05EC128214A790025E49C /* SimpleGameDalmaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36E05E9628214A770025E49C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					36E05E9D28214A770025E49C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					36E05EB628214A790025E49C = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 36E05E9D28214A770025E49C;
+					};
+					36E05EC028214A790025E49C = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 36E05E9D28214A770025E49C;
+					};
+				};
+			};
+			buildConfigurationList = 36E05E9928214A770025E49C /* Build configuration list for PBXProject "SimpleGameDalma" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36E05E9528214A770025E49C;
+			productRefGroup = 36E05E9F28214A770025E49C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36E05E9D28214A770025E49C /* SimpleGameDalma */,
+				36E05EB628214A790025E49C /* SimpleGameDalmaTests */,
+				36E05EC028214A790025E49C /* SimpleGameDalmaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36E05E9C28214A770025E49C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C716AE28218BBA00305FE0 /* gameover.mp3 in Resources */,
+				36E05EB128214A780025E49C /* LaunchScreen.storyboard in Resources */,
+				36C716AF28218BBA00305FE0 /* truebtn.mp3 in Resources */,
+				36C716AD28218BBA00305FE0 /* mainbgm.mp3 in Resources */,
+				36C716B32821952D00305FE0 /* GameViewController.xib in Resources */,
+				36C716AB28218BBA00305FE0 /* gamebgm.mp3 in Resources */,
+				36C716AA28218BBA00305FE0 /* falsebtn.mp3 in Resources */,
+				36E05EAE28214A780025E49C /* Assets.xcassets in Resources */,
+				36E05EA928214A770025E49C /* Main.storyboard in Resources */,
+				36C716AC28218BBA00305FE0 /* pause.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E05EB528214A790025E49C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E05EBF28214A790025E49C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36E05E9A28214A770025E49C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C716B22821952D00305FE0 /* GameViewController.swift in Sources */,
+				36E05EA628214A770025E49C /* ViewController.swift in Sources */,
+				36E05EA228214A770025E49C /* AppDelegate.swift in Sources */,
+				36C716B82821A35E00305FE0 /* Model.swift in Sources */,
+				36E05EA428214A770025E49C /* SceneDelegate.swift in Sources */,
+				36E05EAC28214A770025E49C /* SimpleGameDalma.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E05EB328214A790025E49C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E05EBC28214A790025E49C /* SimpleGameDalmaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E05EBD28214A790025E49C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E05EC828214A790025E49C /* SimpleGameDalmaUITestsLaunchTests.swift in Sources */,
+				36E05EC628214A790025E49C /* SimpleGameDalmaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36E05EB928214A790025E49C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36E05E9D28214A770025E49C /* SimpleGameDalma */;
+			targetProxy = 36E05EB828214A790025E49C /* PBXContainerItemProxy */;
+		};
+		36E05EC328214A790025E49C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36E05E9D28214A770025E49C /* SimpleGameDalma */;
+			targetProxy = 36E05EC228214A790025E49C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36E05EA728214A770025E49C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E05EA828214A770025E49C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36E05EAF28214A780025E49C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E05EB028214A780025E49C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36E05EC928214A790025E49C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36E05ECA28214A790025E49C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36E05ECC28214A790025E49C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RDXK25LLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleGameDalma/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleGameDalma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36E05ECD28214A790025E49C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RDXK25LLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleGameDalma/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleGameDalma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		36E05ECF28214A790025E49C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RDXK25LLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleGameDalmaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleGameDalma.app/SimpleGameDalma";
+			};
+			name = Debug;
+		};
+		36E05ED028214A790025E49C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RDXK25LLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleGameDalmaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleGameDalma.app/SimpleGameDalma";
+			};
+			name = Release;
+		};
+		36E05ED228214A790025E49C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RDXK25LLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleGameDalmaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleGameDalma;
+			};
+			name = Debug;
+		};
+		36E05ED328214A790025E49C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RDXK25LLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimpleGameDalmaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleGameDalma;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36E05E9928214A770025E49C /* Build configuration list for PBXProject "SimpleGameDalma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E05EC928214A790025E49C /* Debug */,
+				36E05ECA28214A790025E49C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E05ECB28214A790025E49C /* Build configuration list for PBXNativeTarget "SimpleGameDalma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E05ECC28214A790025E49C /* Debug */,
+				36E05ECD28214A790025E49C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E05ECE28214A790025E49C /* Build configuration list for PBXNativeTarget "SimpleGameDalmaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E05ECF28214A790025E49C /* Debug */,
+				36E05ED028214A790025E49C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E05ED128214A790025E49C /* Build configuration list for PBXNativeTarget "SimpleGameDalmaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E05ED228214A790025E49C /* Debug */,
+				36E05ED328214A790025E49C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		36E05EAA28214A770025E49C /* SimpleGameDalma.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				36E05EAB28214A770025E49C /* SimpleGameDalma.xcdatamodel */,
+			);
+			currentVersion = 36E05EAB28214A770025E49C /* SimpleGameDalma.xcdatamodel */;
+			path = SimpleGameDalma.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 36E05E9628214A770025E49C /* Project object */;
+}
