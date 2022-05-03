@@ -11,7 +11,12 @@
  3.결과값이 화면에 보여진다.
  */
 
+/*
+ 음악파일 추가, AVFoundation 추가, AVAudioPlayer 실행
+ */
+
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -20,6 +25,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLbl: UILabel!
     @IBOutlet weak var imageContainer: UIView!
     @IBOutlet weak var fistImage: UIImageView!
+    
+    var player: AVAudioPlayer?
     
     var comBallCount: Int = 20
     var userBallCount: Int = 20
@@ -31,13 +38,38 @@ class ViewController: UIViewController {
         userBallCountLbl.text = String(userBallCount)
         
         self.imageContainer.isHidden = true
+        self.play(fileName: "intro")
         
-       
     }
+    
+    func play(fileName: String) {
+        let filePath = Bundle.main.url(forResource: fileName, withExtension: "mp3")
 
+        guard let path = filePath else {
+            return
+        }
+        //        self.player = try? AVAudioPlayer(contentsOf: path)
+        
+        do {
+            self.player = try AVAudioPlayer(contentsOf: path)
+            guard let soundPlayer = self.player else {
+                return
+            }
+            
+            soundPlayer.prepareToPlay()
+            soundPlayer.play()
+            
+        } catch let error {
+            print("\(error.localizedDescription)")
+        }
+        
+    }
+    
+    
     @IBAction func gameStartPressed(_ sender: UIButton) {
         
         self.imageContainer.isHidden = false
+        self.play(fileName: "gamestart")
         
         UIView.animate(withDuration: 3.0) {
             self.fistImage.transform = CGAffineTransform(scaleX: 5, y: 1)
@@ -58,8 +90,10 @@ class ViewController: UIViewController {
         let oddButton = UIAlertAction.init(title: "홀", style: .default) { _ in
             print("홀 버튼을 클릭했습니다.")
             
+            self.play(fileName: "click")
+            
             guard let input = alert.textFields?.first?.text,
-            let value = Int(input) else {
+                  let value = Int(input) else {
                 return
             }
             print("입력한 값은 \(input)입니다.")
@@ -68,6 +102,8 @@ class ViewController: UIViewController {
         
         let evenButton = UIAlertAction.init(title: "짝", style: .default) { _ in
             print("짝 버튼을 클릭했습니다.")
+            
+            self.play(fileName: "click")
             
             guard let input = alert.textFields?.first?.text else {
                 return
