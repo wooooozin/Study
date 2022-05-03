@@ -18,7 +18,9 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SettingDelegate {
+    
+    
     
     @IBOutlet weak var computerBallCountLbl: UILabel!
     @IBOutlet weak var userBallCountLbl: UILabel!
@@ -185,5 +187,23 @@ class ViewController: UIViewController {
         return balls == 0
     }
     
+    
+    
+    @IBAction func settingBtnPressed(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        vc.modalPresentationStyle = .fullScreen
+        
+        vc.settinDelegate = self
+        
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    func getBallsCount(ballsCount: Int) {
+        self.userBallCountLbl.text = "\(ballsCount)"
+        self.computerBallCountLbl.text = "\(ballsCount)"
+    }
 }
 
