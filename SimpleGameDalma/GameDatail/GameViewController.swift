@@ -20,7 +20,8 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
     var countTimer: Timer?
     var timeCounter: Int = 20
     var blockCounter: Int = 0
-    
+    var timer: DispatchSourceTimer?
+
     
     @IBOutlet weak var q1: UIImageView!
     @IBOutlet weak var q2: UIImageView!
@@ -46,7 +47,9 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewDidLoad()
         
         playBackgroundSound()
-        setTimer()
+        //        setTimer()
+        newTimer()
+        startTimer()
         setImage()
     }
     
@@ -86,7 +89,7 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
             
             checkColor(color: "blue")
             play(fileName: "truebtn")
-           
+            
         } else {
             play(fileName: "falsebtn")
             blockCounter -= 5
@@ -101,7 +104,8 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func pushPause(_ sender: UIButton) {
         
         play(fileName: "pause")
-
+//        pauseTimer()
+        
         let vc = PauseViewController.init(nibName: "PauseViewController", bundle: nil)
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
@@ -150,27 +154,27 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     // MARK: - Changed timer, score
-    func setTimer() {
-        countTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changedTimer), userInfo: nil, repeats: true)
-    }
-    
-    @objc func changedTimer() {
-        if timeCounter != 0 {
-            let strCounter = String(format: "%02d", timeCounter)
-            timeLbl.text = "00:\(strCounter)"
-            timeCounter -= 1
-        }   else if timeCounter == 0 {
-            bgmPlayer?.stop()
-            countTimer?.invalidate()
-            countTimer = nil
-            print("End")
-            
-            let vc = ResultViewController.init(nibName: "ResultViewController", bundle: nil)
-            vc.modalPresentationStyle = .overFullScreen
-            vc.text = blockCountLbl.text ?? ""
-            present(vc, animated: true, completion: nil)
-        }
-    }
+    //    func setTimer() {
+    //        countTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changedTimer), userInfo: nil, repeats: true)
+    //    }
+    //
+    //    @objc func changedTimer() {
+    //        if timeCounter != 0 {
+    //            let strCounter = String(format: "%02d", timeCounter)
+    //            timeLbl.text = "00:\(strCounter)"
+    //            timeCounter -= 1
+    //        }   else if timeCounter == 0 {
+    //            bgmPlayer?.stop()
+    //            countTimer?.invalidate()
+    //            countTimer = nil
+    //            print("End")
+    //
+    //            let vc = ResultViewController.init(nibName: "ResultViewController", bundle: nil)
+    //            vc.modalPresentationStyle = .overFullScreen
+    //            vc.text = blockCountLbl.text ?? ""
+    //            present(vc, animated: true, completion: nil)
+    //        }
+    //    }
     
     func changeScoreText() {
         DispatchQueue.global(qos: .userInitiated).async {
@@ -200,20 +204,20 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
     // MARK: - 이미지 메인 설정
     
     func setImage() {
-      
-                self.q1.image = self.blockArray.randomElement()
-                self.q2.image = self.blockArray.randomElement()
-                self.q3.image = self.blockArray.randomElement()
-                self.q4.image = self.blockArray.randomElement()
-                self.q5.image = self.blockArray.randomElement()
-                self.q6.image = self.blockArray.randomElement()
-                self.q7.image = self.blockArray.randomElement()
-                self.q8.image = self.blockArray.randomElement()
-                self.q9.image = self.blockArray.randomElement()
-                
+        
+        self.q1.image = self.blockArray.randomElement()
+        self.q2.image = self.blockArray.randomElement()
+        self.q3.image = self.blockArray.randomElement()
+        self.q4.image = self.blockArray.randomElement()
+        self.q5.image = self.blockArray.randomElement()
+        self.q6.image = self.blockArray.randomElement()
+        self.q7.image = self.blockArray.randomElement()
+        self.q8.image = self.blockArray.randomElement()
+        self.q9.image = self.blockArray.randomElement()
+        
     }
     
-
+    
     // MARK: - 버튼 데이터 값 확인
     
     func checkColor(color: String) {
@@ -241,6 +245,44 @@ class GameViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    // MARK: - New Timer
+    
+    public func newTimer() {
+                self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
+                self.timer?.schedule(deadline: .now(), repeating: 1.0)
+            
+                self.timer?.setEventHandler(handler: { [self] in
+            if timeCounter != 0 {
+                let strCounter = String(format: "%02d", self.timeCounter)
+                timeLbl.text = "00:\(strCounter)"
+                timeCounter -= 1
+            }   else if timeCounter == 0 {
+                bgmPlayer?.stop()
+//                countTimer?.invalidate()
+//                countTimer = nil
+                stopTimer()
+                print("End")
+                
+                let vc = ResultViewController.init(nibName: "ResultViewController", bundle: nil)
+                vc.modalPresentationStyle = .overFullScreen
+                vc.text = blockCountLbl.text ?? ""
+                present(vc, animated: true, completion: nil)
+            }
+        })
+            }
+    
+    func startTimer() {
+        self.timer?.resume()
+    }
+    
+    func pauseTimer() {
+        timer?.suspend()
+    }
+    
+    func stopTimer() {
+        timer?.cancel()
+        timer = nil
+    }
     
 }
 
