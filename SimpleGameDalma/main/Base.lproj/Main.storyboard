@@ -19,20 +19,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kt4-St-vVH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-u3-36l">
-                                        <rect key="frame" x="78.5" y="204.5" width="257" height="409"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-u3-36l">
+                                        <rect key="frame" x="68" y="209.5" width="278" height="399"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBlock" translatesAutoresizingMaskIntoConstraints="NO" id="rwz-Ir-Ji5">
-                                                <rect key="frame" x="0.0" y="0.0" width="257" height="64"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redBlock" translatesAutoresizingMaskIntoConstraints="NO" id="rwz-Ir-Ji5">
+                                                <rect key="frame" x="0.0" y="0.0" width="278" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="JRb-OO-qOq"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowBlock" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-mr-Y7t">
-                                                <rect key="frame" x="0.0" y="69" width="257" height="64"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowBlock" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-mr-Y7t">
+                                                <rect key="frame" x="0.0" y="67" width="278" height="64"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueblock" translatesAutoresizingMaskIntoConstraints="NO" id="ujN-Kk-JnN">
-                                                <rect key="frame" x="0.0" y="138" width="257" height="64"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueblock" translatesAutoresizingMaskIntoConstraints="NO" id="ujN-Kk-JnN">
+                                                <rect key="frame" x="0.0" y="134" width="278" height="64"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEb-oQ-qYq">
-                                                <rect key="frame" x="0.0" y="207" width="257" height="64"/>
+                                                <rect key="frame" x="0.0" y="201" width="278" height="64"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="시작하기" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
@@ -44,19 +47,19 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du9-4R-9p6">
-                                                <rect key="frame" x="0.0" y="276" width="257" height="64"/>
+                                                <rect key="frame" x="0.0" y="268" width="278" height="64"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="게임설정" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="tinted" title="게임방법" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                                     <color key="baseForegroundColor" red="0.94625347849999997" green="0.76249504089999998" blue="0.30966740850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="baseBackgroundColor" red="0.94625347849999997" green="0.76249504089999998" blue="0.30966740850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="pushSettingApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBP-kH-mDC"/>
+                                                    <action selector="pushHowToGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sFZ-91-tTS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqm-M3-vO9">
-                                                <rect key="frame" x="0.0" y="345" width="257" height="64"/>
+                                                <rect key="frame" x="0.0" y="335" width="278" height="64"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="종료하기" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
@@ -73,6 +76,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="a8g-u3-36l" firstAttribute="centerY" secondItem="kt4-St-vVH" secondAttribute="centerY" id="5lb-Yi-26X"/>
+                                    <constraint firstItem="a8g-u3-36l" firstAttribute="leading" secondItem="kt4-St-vVH" secondAttribute="leading" constant="68" id="MKF-FW-3ag"/>
+                                    <constraint firstAttribute="trailing" secondItem="a8g-u3-36l" secondAttribute="trailing" constant="68" id="X4V-rz-L5B"/>
                                     <constraint firstItem="a8g-u3-36l" firstAttribute="centerX" secondItem="kt4-St-vVH" secondAttribute="centerX" id="nTf-fi-dJP"/>
                                 </constraints>
                             </view>

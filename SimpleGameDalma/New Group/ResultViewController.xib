@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="SimpleGameDalma" customModuleProvider="target">
+            <connections>
+                <outlet property="scoreLbl" destination="uV0-M3-kKQ" id="LEn-gr-fOC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dnt-PO-ZmY">
+                    <rect key="frame" x="68" y="347" width="278" height="202"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogD-j9-IfK">
+                            <rect key="frame" x="0.0" y="0.0" width="278" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="vxY-RX-nmS"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="처음으로" cornerStyle="capsule">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="baseForegroundColor" red="0.86814242600000002" green="0.36971288920000001" blue="0.3372301459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="baseBackgroundColor" red="0.86814242600000002" green="0.36971288920000001" blue="0.3372301459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="toMainBtn:" destination="-1" eventType="touchUpInside" id="jSq-yC-4nl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrH-iC-F3z">
+                            <rect key="frame" x="0.0" y="69" width="278" height="64"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="공유하기" cornerStyle="capsule">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="baseForegroundColor" red="0.94625347849999997" green="0.76249504089999998" blue="0.30966740850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="baseBackgroundColor" red="0.94625347849999997" green="0.76249504089999998" blue="0.30966740850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="ratingBtn:" destination="-1" eventType="touchUpInside" id="iG1-cv-waY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGb-kp-8vr">
+                            <rect key="frame" x="0.0" y="138" width="278" height="64"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="종료하기" cornerStyle="capsule">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="baseForegroundColor" red="0.57199084759999996" green="0.76567655800000001" blue="0.90198010210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="baseBackgroundColor" red="0.57199084759999996" green="0.76567655800000001" blue="0.90198010210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="endBtn:" destination="-1" eventType="touchUpInside" id="rep-Vy-Y1e"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ogD-j9-IfK" firstAttribute="top" secondItem="Dnt-PO-ZmY" secondAttribute="top" id="nIB-z2-fu7"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-M3-kKQ">
+                    <rect key="frame" x="68" y="303" width="278" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.86814242600000002" green="0.36971288920000001" blue="0.3372301459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Dnt-PO-ZmY" firstAttribute="top" secondItem="uV0-M3-kKQ" secondAttribute="bottom" constant="20" id="EeO-Z5-T2o"/>
+                <constraint firstItem="uV0-M3-kKQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="68" id="MN4-fq-1Yl"/>
+                <constraint firstItem="Dnt-PO-ZmY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="W3q-pC-ATv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uV0-M3-kKQ" secondAttribute="trailing" constant="68" id="g7D-ff-cug"/>
+                <constraint firstItem="Dnt-PO-ZmY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="68" id="pYj-fn-ErZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dnt-PO-ZmY" secondAttribute="trailing" constant="68" id="vBF-Yz-bEH"/>
+                <constraint firstItem="Dnt-PO-ZmY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="w2v-Nv-OLe"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

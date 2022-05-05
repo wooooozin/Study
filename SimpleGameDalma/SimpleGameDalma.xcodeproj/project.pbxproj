@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362FAFA32823910100040428 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FAFA12823910100040428 /* ResultViewController.swift */; };
+		362FAFA42823910100040428 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362FAFA22823910100040428 /* ResultViewController.xib */; };
+		369B2DF02823AC980017A76B /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B2DEE2823AC980017A76B /* HowToViewController.swift */; };
+		369B2DF12823AC980017A76B /* HowToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369B2DEF2823AC980017A76B /* HowToViewController.xib */; };
 		36C716AA28218BBA00305FE0 /* falsebtn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A428218BBA00305FE0 /* falsebtn.mp3 */; };
 		36C716AB28218BBA00305FE0 /* gamebgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A528218BBA00305FE0 /* gamebgm.mp3 */; };
 		36C716AC28218BBA00305FE0 /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36C716A628218BBA00305FE0 /* pause.mp3 */; };
@@ -16,6 +20,8 @@
 		36C716B22821952D00305FE0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C716B02821952D00305FE0 /* GameViewController.swift */; };
 		36C716B32821952D00305FE0 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C716B12821952D00305FE0 /* GameViewController.xib */; };
 		36C716B82821A35E00305FE0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C716B72821A35E00305FE0 /* Model.swift */; };
+		36CAB3F12821AEC0001FD630 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CAB3EF2821AEC0001FD630 /* PauseViewController.swift */; };
+		36CAB3F22821AEC0001FD630 /* PauseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36CAB3F02821AEC0001FD630 /* PauseViewController.xib */; };
 		36E05EA228214A770025E49C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EA128214A770025E49C /* AppDelegate.swift */; };
 		36E05EA428214A770025E49C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EA328214A770025E49C /* SceneDelegate.swift */; };
 		36E05EA628214A770025E49C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05EA528214A770025E49C /* ViewController.swift */; };
@@ -46,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		362FAFA12823910100040428 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		362FAFA22823910100040428 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		369B2DEE2823AC980017A76B /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
+		369B2DEF2823AC980017A76B /* HowToViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowToViewController.xib; sourceTree = "<group>"; };
 		36C716A428218BBA00305FE0 /* falsebtn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = falsebtn.mp3; sourceTree = "<group>"; };
 		36C716A528218BBA00305FE0 /* gamebgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gamebgm.mp3; sourceTree = "<group>"; };
 		36C716A628218BBA00305FE0 /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pause.mp3; sourceTree = "<group>"; };
@@ -55,6 +65,8 @@
 		36C716B02821952D00305FE0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		36C716B12821952D00305FE0 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		36C716B72821A35E00305FE0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		36CAB3EF2821AEC0001FD630 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		36CAB3F02821AEC0001FD630 /* PauseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PauseViewController.xib; sourceTree = "<group>"; };
 		36E05E9E28214A770025E49C /* SimpleGameDalma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGameDalma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E05EA128214A770025E49C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36E05EA328214A770025E49C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		362FAFA0282390D600040428 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				362FAFA12823910100040428 /* ResultViewController.swift */,
+				362FAFA22823910100040428 /* ResultViewController.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		36C716A328217CF300305FE0 /* bgm */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +147,7 @@
 				36E05EA028214A770025E49C /* SimpleGameDalma */,
 				36E05ED428214BED0025E49C /* main */,
 				36E05ED528214BFE0025E49C /* GameDatail */,
+				362FAFA0282390D600040428 /* New Group */,
 				36C716B42821A03A00305FE0 /* Model */,
 				36E05E9F28214A770025E49C /* Products */,
 			);
@@ -174,8 +196,10 @@
 		36E05ED428214BED0025E49C /* main */ = {
 			isa = PBXGroup;
 			children = (
-				36E05EA528214A770025E49C /* ViewController.swift */,
 				36E05EA728214A770025E49C /* Main.storyboard */,
+				36E05EA528214A770025E49C /* ViewController.swift */,
+				369B2DEF2823AC980017A76B /* HowToViewController.xib */,
+				369B2DEE2823AC980017A76B /* HowToViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -183,8 +207,10 @@
 		36E05ED528214BFE0025E49C /* GameDatail */ = {
 			isa = PBXGroup;
 			children = (
-				36C716B02821952D00305FE0 /* GameViewController.swift */,
 				36C716B12821952D00305FE0 /* GameViewController.xib */,
+				36C716B02821952D00305FE0 /* GameViewController.swift */,
+				36CAB3F02821AEC0001FD630 /* PauseViewController.xib */,
+				36CAB3EF2821AEC0001FD630 /* PauseViewController.swift */,
 			);
 			path = GameDatail;
 			sourceTree = "<group>";
@@ -298,7 +324,10 @@
 				36C716AF28218BBA00305FE0 /* truebtn.mp3 in Resources */,
 				36C716AD28218BBA00305FE0 /* mainbgm.mp3 in Resources */,
 				36C716B32821952D00305FE0 /* GameViewController.xib in Resources */,
+				36CAB3F22821AEC0001FD630 /* PauseViewController.xib in Resources */,
 				36C716AB28218BBA00305FE0 /* gamebgm.mp3 in Resources */,
+				369B2DF12823AC980017A76B /* HowToViewController.xib in Resources */,
+				362FAFA42823910100040428 /* ResultViewController.xib in Resources */,
 				36C716AA28218BBA00305FE0 /* falsebtn.mp3 in Resources */,
 				36E05EAE28214A780025E49C /* Assets.xcassets in Resources */,
 				36E05EA928214A770025E49C /* Main.storyboard in Resources */,
@@ -330,8 +359,11 @@
 				36C716B22821952D00305FE0 /* GameViewController.swift in Sources */,
 				36E05EA628214A770025E49C /* ViewController.swift in Sources */,
 				36E05EA228214A770025E49C /* AppDelegate.swift in Sources */,
+				369B2DF02823AC980017A76B /* HowToViewController.swift in Sources */,
+				362FAFA32823910100040428 /* ResultViewController.swift in Sources */,
 				36C716B82821A35E00305FE0 /* Model.swift in Sources */,
 				36E05EA428214A770025E49C /* SceneDelegate.swift in Sources */,
+				36CAB3F12821AEC0001FD630 /* PauseViewController.swift in Sources */,
 				36E05EAC28214A770025E49C /* SimpleGameDalma.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
