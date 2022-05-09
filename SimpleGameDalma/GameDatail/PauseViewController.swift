@@ -22,7 +22,9 @@ class PauseViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func pushGoOn(_ sender: UIButton) {
         play(fileName: "pause")
 //        let vc = GameViewController()
-//        vc.timer?.resume()
+//
+//            vc.timer?.resume()
+
       
         self.dismiss(animated: true, completion: nil)
 

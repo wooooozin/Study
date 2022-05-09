@@ -108,13 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		362FAFA0282390D600040428 /* New Group */ = {
+		362FAFA0282390D600040428 /* ResultDetail */ = {
 			isa = PBXGroup;
 			children = (
 				362FAFA12823910100040428 /* ResultViewController.swift */,
 				362FAFA22823910100040428 /* ResultViewController.xib */,
 			);
-			path = "New Group";
+			path = ResultDetail;
 			sourceTree = "<group>";
 		};
 		36C716A328217CF300305FE0 /* bgm */ = {
@@ -147,7 +147,7 @@
 				36E05EA028214A770025E49C /* SimpleGameDalma */,
 				36E05ED428214BED0025E49C /* main */,
 				36E05ED528214BFE0025E49C /* GameDatail */,
-				362FAFA0282390D600040428 /* New Group */,
+				362FAFA0282390D600040428 /* ResultDetail */,
 				36C716B42821A03A00305FE0 /* Model */,
 				36E05E9F28214A770025E49C /* Products */,
 			);
