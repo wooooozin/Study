@@ -1,0 +1,6 @@
+framework module Pods_MovieIt {
+  umbrella header "Pods-MovieIt-umbrella.h"
+
+  export *
+  module * { export * }
+}
