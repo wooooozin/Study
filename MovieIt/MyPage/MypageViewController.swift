@@ -71,8 +71,9 @@ class MypageViewController: UIViewController {
             // 사용자 정보 보여주기
             if let nickname = nickname {
                 nickNameLbl.text = "\(nickname)님 환영합니다."
+            } else {
+                nickNameLbl.text = "로그인 후 서비스를 이용하세요."
             }
-            // 닉네임의 경우 필수동의 항목이라서 else 문이 필요하지 않았다.
             
             if let emial = email {
                 emailLbl.text = "\(emial)님 환영합니다."

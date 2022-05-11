@@ -53,7 +53,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapGuestBtn(_ sender: UIButton) {
-        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") else {return}
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     
@@ -113,7 +115,7 @@ extension ViewController {
 //  사용자 정보를 성공적으로 가져오면 화면전환 한다.
     private func getUserInfo() {
 
-        // ✅ 사용자 정보 가져오기
+        // 사용자 정보 가져오기
         UserApi.shared.me() {(user, error) in
             if let error = error {
                 print(error)
@@ -121,16 +123,8 @@ extension ViewController {
             else {
                 print("me() success.")
                 
-                // ✅ 닉네임, 이메일 정보
-                let nickname = user?.kakaoAccount?.profile?.nickname
-                let email = user?.kakaoAccount?.email
-                
-                
-                let vc = MypageViewController.init(nibName: "MypageViewController", bundle: nil)
-                vc.email = email
-                vc.nickname = nickname
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") else {return}
                 vc.modalPresentationStyle = .overFullScreen
-               
                 self.present(vc, animated: true, completion: nil)
             }
         }

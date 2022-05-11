@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,14 +85,179 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="841" y="-749"/>
+        </scene>
+        <!--영화관 찾기-->
+        <scene sceneID="9ND-sR-HAt">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gd2-d9-l2u" customClass="SearchVC" customModule="MovieIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XWn-Zh-dV9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Kg4-8x-HkD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="영화관 찾기" id="Vha-aB-q27">
+                        <imageReference key="image" image="location.viewfinder" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageReference key="selectedImage" image="location.fill.viewfinder" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jv6-pq-nEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="834"/>
+        </scene>
+        <!--검색-->
+        <scene sceneID="CQo-Ia-rDS">
+            <objects>
+                <viewController storyboardIdentifier="MovieSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="atQ-xo-nIr" customClass="MovieSearchVC" customModule="MovieIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OeK-LD-BuX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tN9-bv-DUv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pCG-LJ-v4X">
+                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MFP-DW-xmn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pCG-LJ-v4X" firstAttribute="leading" secondItem="MFP-DW-xmn" secondAttribute="leading" id="Kr1-LX-a66"/>
+                            <constraint firstAttribute="trailing" secondItem="tN9-bv-DUv" secondAttribute="trailing" id="TtV-HM-vKk"/>
+                            <constraint firstItem="tN9-bv-DUv" firstAttribute="leading" secondItem="MFP-DW-xmn" secondAttribute="leading" id="Yju-5s-HCd"/>
+                            <constraint firstItem="MFP-DW-xmn" firstAttribute="trailing" secondItem="pCG-LJ-v4X" secondAttribute="trailing" id="kXQ-KO-pWf"/>
+                            <constraint firstItem="pCG-LJ-v4X" firstAttribute="top" secondItem="tN9-bv-DUv" secondAttribute="bottom" id="lUx-h9-uxB"/>
+                            <constraint firstItem="tN9-bv-DUv" firstAttribute="top" secondItem="MFP-DW-xmn" secondAttribute="top" id="sbt-sV-yf2"/>
+                            <constraint firstItem="MFP-DW-xmn" firstAttribute="bottom" secondItem="pCG-LJ-v4X" secondAttribute="bottom" id="tmC-nk-bpz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass.circle" catalog="system" selectedImage="magnifyingglass.circle.fill" id="oRV-LG-V2F"/>
+                    <connections>
+                        <outlet property="movieSearchTableView" destination="pCG-LJ-v4X" id="JEz-Pv-ufj"/>
+                        <outlet property="searchBar" destination="tN9-bv-DUv" id="eKM-CC-H69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgU-y3-feN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="834"/>
+        </scene>
+        <!--마이페이지-->
+        <scene sceneID="cea-Ij-ziT">
+            <objects>
+                <viewController id="MM1-zY-PXz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Gh-k4-zit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7UM-0v-owe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" selectedImage="person.fill" id="0vh-yH-wcA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97s-Dm-mXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389.8550724637685" y="833.70535714285711"/>
+        </scene>
+        <!--오늘 뭐 볼까?-->
+        <scene sceneID="XIE-Js-8JL">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GJy-2m-b4o" customClass="MainVC" customModule="MovieIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WiR-up-4Bd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" separatorInsetReference="fromAutomaticInsets" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" estimatedSectionHeaderHeight="-1" sectionFooterHeight="5" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jnv-fP-Fz6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fiS-Dm-qKJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jnv-fP-Fz6" firstAttribute="leading" secondItem="fiS-Dm-qKJ" secondAttribute="leading" id="SNf-xV-g6j"/>
+                            <constraint firstItem="fiS-Dm-qKJ" firstAttribute="bottom" secondItem="Jnv-fP-Fz6" secondAttribute="bottom" id="ajr-Rc-cwV"/>
+                            <constraint firstItem="fiS-Dm-qKJ" firstAttribute="trailing" secondItem="Jnv-fP-Fz6" secondAttribute="trailing" id="ktL-Nf-uJ6"/>
+                            <constraint firstItem="Jnv-fP-Fz6" firstAttribute="top" secondItem="fiS-Dm-qKJ" secondAttribute="top" id="yYP-ba-dyH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="오늘 뭐 볼까?" id="gjW-gg-htD"/>
+                    <connections>
+                        <outlet property="movieListTableView" destination="Jnv-fP-Fz6" id="CXc-hO-153"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3X-Zo-pzi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="1564"/>
+        </scene>
+        <!--Tab BarVC-->
+        <scene sceneID="uLe-D0-sex">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarVC" id="wFL-JP-83T" customClass="TabBarVC" customModule="MovieIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bCF-dx-Jx9"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="51o-f2-HI5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PK8-AP-FSh" kind="relationship" relationship="viewControllers" id="gWs-2V-tH0"/>
+                        <segue destination="Gd2-d9-l2u" kind="relationship" relationship="viewControllers" id="9UA-Nh-WJp"/>
+                        <segue destination="atQ-xo-nIr" kind="relationship" relationship="viewControllers" id="rqi-Y1-8BV"/>
+                        <segue destination="MM1-zY-PXz" kind="relationship" relationship="viewControllers" id="iPp-Nd-Gt1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBP-cW-Mi9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="98"/>
+        </scene>
+        <!--박스오피스-->
+        <scene sceneID="aMW-Nj-aL5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PK8-AP-FSh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="박스오피스" image="film" catalog="system" selectedImage="film.fill" id="Amj-gi-hIC">
+                        <color key="badgeColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QjG-sT-U7m">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GJy-2m-b4o" kind="relationship" relationship="rootViewController" id="edu-EI-8pZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vj-NA-r29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495.6521739130435" y="828.34821428571422"/>
         </scene>
     </scenes>
     <resources>
         <image name="MVIT" width="1024" height="1024"/>
         <image name="film" catalog="system" width="128" height="93"/>
+        <image name="film.fill" catalog="system" width="128" height="93"/>
+        <image name="location.fill.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="location.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
