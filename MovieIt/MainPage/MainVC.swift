@@ -20,6 +20,7 @@ class MainVC: UIViewController  {
     ]
     
     var result: [dailyBoxOfficeList] = []
+    var weekResult: [weeklyBoxOfficeList] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class MainVC: UIViewController  {
         movieListTableView.register(UINib(nibName: "MainTableTableViewCell", bundle: nil), forCellReuseIdentifier: "MainTableTableViewCell")
         
         MovieListRequest().getDailyMovieData(self)
+        WeekMovieListRequest().getWeeklyMovieData(self)
+
     }
     
     
@@ -57,13 +60,20 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        
         let cell = movieListTableView.dequeueReusableCell(withIdentifier: "MainTableTableViewCell", for: indexPath) as! MainTableTableViewCell
         
+        if indexPath.section == 0 {
         cell.gradeLbl.text = result[indexPath.row].rank
         cell.movieTitleLbl.text = result[indexPath.row].movieNm
     
         return cell
+        } else if indexPath.section == 1 {
+
+            cell.gradeLbl.text = weekResult[indexPath.row].rank
+            cell.movieTitleLbl.text = weekResult[indexPath.row].movieNm
+            
+            return cell
         }
         return UITableViewCell()
         
@@ -73,10 +83,3 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             return UITableView.automaticDimension
         }
 }
-
-extension MainVC {
-    func didSuccess(_ response: MovieListResponse) {
-        
-    }
-}
-

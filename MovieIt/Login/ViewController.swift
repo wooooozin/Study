@@ -14,6 +14,7 @@ import KakaoSDKCommon
 class ViewController: UIViewController {
 
     
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,10 +123,14 @@ extension ViewController {
             }
             else {
                 print("me() success.")
+                                            
                 
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") else {return}
+                
                 vc.modalPresentationStyle = .overFullScreen
+                
                 self.present(vc, animated: true, completion: nil)
+                
             }
         }
     }

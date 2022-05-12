@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: - 일별 박스오피스 모델
 
-struct MovieListResponse:Decodable {
+struct DailyMovieListResponse:Decodable {
 
     var boxOfficeResult: boxOfficeResult
 
@@ -45,4 +45,37 @@ struct dailyBoxOfficeList: Decodable {
 
 
 
+struct WeeklyMovieListResponse:Decodable {
 
+    var boxOfficeResult: boxOfficeResult1
+
+}
+
+struct boxOfficeResult1: Decodable {
+    var boxofficeType: String
+    var showRange: String
+    var yearWeekTime: String
+    var weeklyBoxOfficeList: [weeklyBoxOfficeList]
+}
+
+struct weeklyBoxOfficeList: Decodable {
+    var rnum: String
+    var rank: String
+    var rankInten: String
+    var rankOldAndNew: String
+    var movieCd: String
+    var movieNm: String
+    var openDt: String
+    var salesAmt: String
+    var salesShare: String
+    var salesInten: String
+    var salesChange: String
+    var salesAcc: String
+    var audiCnt: String
+    var audiInten: String
+    var audiChange: String
+    var audiAcc: String
+    var scrnCnt: String
+    var showCnt: String
+
+}

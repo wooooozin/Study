@@ -17,21 +17,55 @@ class MovieListRequest {
         
         let param: Parameters = [
             "key" : "8139e4985e5e96ba220e8c10738959c6",
-            "targetDt" : "20220509"
+            "targetDt" : "20220511"
         ]
         
         //HTTP Method: GET
         AF.request(url,
                    method: .get,
                    parameters: param,
-                   headers: nil).responseDecodable(of: MovieListResponse.self) { response in
+                   headers: nil).responseDecodable(of: DailyMovieListResponse
+                    .self) { response in
             
             switch response.result {
                 
             case .success(let response):
                 print("성공 DEBUG>> Response \(response) ")
                 viewController.result = response.boxOfficeResult.dailyBoxOfficeList
+                
+            case .failure(let error):
+                print("DEBUG>> Get Error : \(error.localizedDescription)")
+            }
+        }
+    }
+    
+}
+
+
+class WeekMovieListRequest {
+    
+    func getWeeklyMovieData(_ viewController: MainVC) {
+        let url = "https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=8139e4985e5e96ba220e8c10738959c6&targetDt=20220508"
+        
+        let param: Parameters = [
+            "key" : "8139e4985e5e96ba220e8c10738959c6",
+            "targetDt" : "20220508"
+        ]
+        
+        //HTTP Method: GET
+        AF.request(url,
+                   method: .get,
+                   parameters: param,
+                   headers: nil).responseDecodable(of: WeeklyMovieListResponse
+                    .self) { response in
+            
+            switch response.result {
+                
+            case .success(let response):
+                print("성공 DEBUG>> Response \(response) ")
+                viewController.weekResult = response.boxOfficeResult.weeklyBoxOfficeList
                 viewController.movieListTableView.reloadData()
+               
                 
             case .failure(let error):
                 print("DEBUG>> Get Error : \(error.localizedDescription)")

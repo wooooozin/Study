@@ -115,13 +115,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tN9-bv-DUv">
+                            <searchBar contentMode="redraw" placeholder="작품명, 감독, 배우를 검색해보세요." showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tN9-bv-DUv">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pCG-LJ-v4X">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pCG-LJ-v4X">
                                 <rect key="frame" x="0.0" y="95" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MFP-DW-xmn"/>
@@ -147,20 +150,108 @@
             <point key="canvasLocation" x="1983" y="834"/>
         </scene>
         <!--마이페이지-->
-        <scene sceneID="cea-Ij-ziT">
+        <scene sceneID="YTI-VL-RtA">
             <objects>
-                <viewController id="MM1-zY-PXz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0Gh-k4-zit">
+                <viewController storyboardIdentifier="MypageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="APh-0i-WNo" customClass="MypageVC" customModule="MovieIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="czr-wE-m7d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7UM-0v-owe"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-OJ-zX1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-r3-nez">
+                                        <rect key="frame" x="20" y="24.5" width="70" height="71.5"/>
+                                        <color key="tintColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="7km-PL-iPF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="로그인 후 다양한 서비스를 이용하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbt-xi-Bi0">
+                                        <rect key="frame" x="114" y="39.5" width="280" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yzi-Ef-Bds">
+                                        <rect key="frame" x="241" y="70" width="153" height="26"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtL-rt-qzV">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="26"/>
+                                                <color key="backgroundColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="0.53139096695855759" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="로그아웃">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="10"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapLogOut:" destination="APh-0i-WNo" eventType="touchUpInside" id="MOH-2x-ma4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgI-7S-ynv">
+                                                <rect key="frame" x="77" y="0.0" width="76" height="26"/>
+                                                <color key="backgroundColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="0.53139096695855759" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="계정연결끊기">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="10"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapUnLink:" destination="APh-0i-WNo" eventType="touchUpInside" id="ELf-Bf-n9u"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Yzi-Ef-Bds" firstAttribute="top" secondItem="mbt-xi-Bi0" secondAttribute="bottom" constant="10" id="3by-Vc-6uI"/>
+                                    <constraint firstAttribute="height" constant="120" id="3fn-t0-8Ms"/>
+                                    <constraint firstAttribute="trailing" secondItem="mbt-xi-Bi0" secondAttribute="trailing" constant="20" id="9nO-Rj-CTY"/>
+                                    <constraint firstItem="WhL-r3-nez" firstAttribute="leading" secondItem="UeZ-OJ-zX1" secondAttribute="leading" constant="20" symbolic="YES" id="Gwm-m4-1g0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yzi-Ef-Bds" secondAttribute="bottom" constant="24" id="Njc-ft-M0h"/>
+                                    <constraint firstItem="mbt-xi-Bi0" firstAttribute="leading" secondItem="WhL-r3-nez" secondAttribute="trailing" constant="24" id="RH9-HV-Jj0"/>
+                                    <constraint firstAttribute="bottom" secondItem="WhL-r3-nez" secondAttribute="bottom" constant="23" id="gd4-KD-RKY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yzi-Ef-Bds" secondAttribute="trailing" constant="20" id="hwp-2U-37n"/>
+                                    <constraint firstItem="WhL-r3-nez" firstAttribute="top" secondItem="UeZ-OJ-zX1" secondAttribute="top" constant="23" id="qze-tN-eed"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xWt-H4-8Ng">
+                                <rect key="frame" x="0.0" y="164" width="414" height="649"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="1" minimumInteritemSpacing="1" id="qZl-M0-ajs">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g1w-g0-EFd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xWt-H4-8Ng" firstAttribute="leading" secondItem="g1w-g0-EFd" secondAttribute="leading" id="1xQ-Xy-J7v"/>
+                            <constraint firstItem="UeZ-OJ-zX1" firstAttribute="trailing" secondItem="g1w-g0-EFd" secondAttribute="trailing" id="3Wz-ri-4S5"/>
+                            <constraint firstItem="g1w-g0-EFd" firstAttribute="trailing" secondItem="xWt-H4-8Ng" secondAttribute="trailing" id="5jI-FS-pNz"/>
+                            <constraint firstItem="xWt-H4-8Ng" firstAttribute="top" secondItem="UeZ-OJ-zX1" secondAttribute="bottom" id="I95-r9-Alg"/>
+                            <constraint firstItem="UeZ-OJ-zX1" firstAttribute="top" secondItem="g1w-g0-EFd" secondAttribute="top" id="dsE-3d-iqr"/>
+                            <constraint firstItem="g1w-g0-EFd" firstAttribute="bottom" secondItem="xWt-H4-8Ng" secondAttribute="bottom" id="xPo-KM-TJz"/>
+                            <constraint firstItem="UeZ-OJ-zX1" firstAttribute="leading" secondItem="g1w-g0-EFd" secondAttribute="leading" id="xlH-ZO-MxD"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" selectedImage="person.fill" id="0vh-yH-wcA"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person" catalog="system" selectedImage="person.fill" id="O4z-8m-SGg"/>
+                    <connections>
+                        <outlet property="addCollectionView" destination="xWt-H4-8Ng" id="AgX-Mo-JAf"/>
+                        <outlet property="logoutBtn" destination="XtL-rt-qzV" id="LAy-w4-yZM"/>
+                        <outlet property="nickNameLbl" destination="mbt-xi-Bi0" id="hnI-gw-iGc"/>
+                        <outlet property="profileImageView" destination="WhL-r3-nez" id="0Fi-oY-v4N"/>
+                        <outlet property="unLinkBtn" destination="YgI-7S-ynv" id="wHz-Ea-Ksk"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="97s-Dm-mXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl3-kV-yHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3389.8550724637685" y="833.70535714285711"/>
+            <point key="canvasLocation" x="2671.0144927536235" y="833.70535714285711"/>
         </scene>
         <!--오늘 뭐 볼까?-->
         <scene sceneID="XIE-Js-8JL">
@@ -213,7 +304,7 @@
                         <segue destination="PK8-AP-FSh" kind="relationship" relationship="viewControllers" id="gWs-2V-tH0"/>
                         <segue destination="Gd2-d9-l2u" kind="relationship" relationship="viewControllers" id="9UA-Nh-WJp"/>
                         <segue destination="atQ-xo-nIr" kind="relationship" relationship="viewControllers" id="rqi-Y1-8BV"/>
-                        <segue destination="MM1-zY-PXz" kind="relationship" relationship="viewControllers" id="iPp-Nd-Gt1"/>
+                        <segue destination="APh-0i-WNo" kind="relationship" relationship="viewControllers" id="pS4-IK-hc7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBP-cW-Mi9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
