@@ -11,28 +11,32 @@ import KakaoSDKAuth
 import KakaoSDKCommon
 
 
-class MypageVC: UIViewController {
+class MypageVC: UIViewController {  
+    
     
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
-    
-    
     @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var unLinkBtn: UIButton!
     
-    
     @IBOutlet weak var addCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user()
+        layout()
         
         addCollectionView.delegate = self
         addCollectionView.dataSource = self
         
         addCollectionView.register(UINib(nibName: "AddCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddCollectionViewCell")
+        
+        addCollectionView.reloadData()
+        
     }
-
+    
+    
     //MARK: - Actions
     
     @IBAction func didTapLogOut(_ sender: UIButton) {
@@ -68,24 +72,33 @@ class MypageVC: UIViewController {
     
     func user() {
         UserApi.shared.me() { [self](user, error) in
-               if let error = error {
-                   print(error)
-               }
-               else {
-                   _ = user
-                   
-                   let nick = user?.kakaoAccount?.profile?.nickname
-                   
-                   if  nick == nick {
-                   self.nickNameLbl.text = "\(nick!)님! 환영합니다!"
-                   }
-                   
-                   if let url = user?.kakaoAccount?.profile?.profileImageUrl,
-                                       let data = try? Data(contentsOf: url) {
-                                       self.profileImageView.image = UIImage(data: data)
-                                   }
-               }
-           }
+            if let error = error {
+                print(error)
+            }
+            else {
+                _ = user
+                
+                let nick = user?.kakaoAccount?.profile?.nickname
+                
+                if  nick == nick {
+                    self.nickNameLbl.text = "\(nick!)님! 관심있는 영화를 확인하세요 👀"
+                }
+                
+                if let url = user?.kakaoAccount?.profile?.profileImageUrl,
+                   let data = try? Data(contentsOf: url) {
+                    self.profileImageView.image = UIImage(data: data)
+                }
+            }
+        }
+    }
+    // MARK: - Methods
+    func layout() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (UIScreen.main.bounds.size.width - 1) / 2, height: 200)
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 1
+        
+        addCollectionView.collectionViewLayout = layout
     }
     
 }
@@ -95,14 +108,19 @@ class MypageVC: UIViewController {
 extension MypageVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = addCollectionView.dequeueReusableCell(withReuseIdentifier: "AddCollectionViewCell", for: indexPath) as! AddCollectionViewCell
-                
+        
+        
+        
         return cell
+        
     }
-
+    
 }
+
+

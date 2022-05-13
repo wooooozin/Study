@@ -10,17 +10,17 @@ import Alamofire
 import KakaoSDKUser
 import KakaoSDKAuth
 import KakaoSDKCommon
+import CoreData
+
 
 class ViewController: UIViewController {
-
-    
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            
     }
-    
+ 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // 유효한 토큰 검사

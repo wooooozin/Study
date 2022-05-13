@@ -87,21 +87,36 @@
             </objects>
             <point key="canvasLocation" x="841" y="-749"/>
         </scene>
-        <!--영화관 찾기-->
+        <!--근처 영화관 찾기-->
         <scene sceneID="9ND-sR-HAt">
             <objects>
                 <viewController storyboardIdentifier="SearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gd2-d9-l2u" customClass="SearchVC" customModule="MovieIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XWn-Zh-dV9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldq-Ee-Tld">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Kg4-8x-HkD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kg4-8x-HkD" firstAttribute="trailing" secondItem="Ldq-Ee-Tld" secondAttribute="trailing" id="5IL-6Y-8E8"/>
+                            <constraint firstItem="Kg4-8x-HkD" firstAttribute="bottom" secondItem="Ldq-Ee-Tld" secondAttribute="bottom" id="IL9-R9-unt"/>
+                            <constraint firstItem="Ldq-Ee-Tld" firstAttribute="leading" secondItem="Kg4-8x-HkD" secondAttribute="leading" id="RGl-Ci-8V0"/>
+                            <constraint firstItem="Ldq-Ee-Tld" firstAttribute="top" secondItem="Kg4-8x-HkD" secondAttribute="top" id="g2c-nX-Xos"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="영화관 찾기" id="Vha-aB-q27">
+                    <tabBarItem key="tabBarItem" title="근처 영화관 찾기" id="Vha-aB-q27">
                         <imageReference key="image" image="location.viewfinder" catalog="system" symbolScale="large"/>
                         <color key="badgeColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <imageReference key="selectedImage" image="location.fill.viewfinder" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="subView" destination="Ldq-Ee-Tld" id="wch-mz-nvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jv6-pq-nEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,11 +176,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-r3-nez">
-                                        <rect key="frame" x="20" y="24.5" width="70" height="71.5"/>
+                                        <rect key="frame" x="20" y="21" width="70" height="78"/>
                                         <color key="tintColor" red="0.066666666669999999" green="0.16862745100000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="7km-PL-iPF"/>
                                         </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="로그인 후 다양한 서비스를 이용하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbt-xi-Bi0">
                                         <rect key="frame" x="114" y="39.5" width="280" height="20.5"/>

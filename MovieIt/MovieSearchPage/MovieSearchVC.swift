@@ -13,6 +13,7 @@ import Alamofire
 
 class MovieSearchVC: UIViewController {
     
+    
     var result: [results] = []
     var term = ""
     
@@ -31,11 +32,17 @@ class MovieSearchVC: UIViewController {
         MovieSearchRequest().getMovieSearchData(self)
         hideKeyboardWhenTappedAround()
     }
+    
 }
 
 // MARK: - Extension
 
 extension MovieSearchVC: UITableViewDataSource, UITableViewDelegate {
+    func sendDate() {
+        print("델리게이트")
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return result.count
     }
@@ -53,6 +60,8 @@ extension MovieSearchVC: UITableViewDataSource, UITableViewDelegate {
        }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = movieSearchTableView.dequeueReusableCell(withIdentifier: "MovieCellTableViewCell", for: indexPath) as! MovieCellTableViewCell
         
         cell.title.text = result[indexPath.row].trackName
@@ -75,6 +84,7 @@ extension MovieSearchVC: UITableViewDataSource, UITableViewDelegate {
         
         
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import CoreData
+protocol CellDelegate: AnyObject {
+    func didFinishSaveData()
+}
+
 
 class MovieCellTableViewCell: UITableViewCell {
     
@@ -15,20 +20,23 @@ class MovieCellTableViewCell: UITableViewCell {
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var addBtn: UIButton!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
- 
+        
     }
     
     //MARK: - Actions
     
     @IBAction func didTapaddedFavorite(_ sender: UIButton) {
+        print(title.text ?? "없음")
+
         
     }
+    
+    //MARK: - Methods
 }

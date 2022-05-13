@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mub-Pu-0Om">
                         <rect key="frame" x="20" y="0.0" width="144" height="260"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSj-Os-3Ly">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSj-Os-3Ly">
                                 <rect key="frame" x="0.0" y="0.0" width="144" height="209"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9E-at-oU5">
@@ -37,6 +37,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="heart" catalog="system" symbolScale="medium"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapRemoved:" destination="gTV-IL-0wX" eventType="touchUpInside" id="q8d-ql-Ta1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,6 +69,7 @@
             <connections>
                 <outlet property="addImageView" destination="OSj-Os-3Ly" id="CAx-xr-jhg"/>
                 <outlet property="addTitleLbl" destination="c9E-at-oU5" id="b8Z-P6-EcN"/>
+                <outlet property="addedBtn" destination="HXh-26-95x" id="geY-3y-oVA"/>
             </connections>
             <point key="canvasLocation" x="234.78260869565219" y="176.11607142857142"/>
         </collectionViewCell>

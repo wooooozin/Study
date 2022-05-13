@@ -6,19 +6,24 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCollectionViewCell: UICollectionViewCell {
-    
+
     
     @IBOutlet weak var addImageView: UIImageView!
     @IBOutlet weak var addTitleLbl: UILabel!
+    
+    @IBOutlet weak var addedBtn: UIButton!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        
-        
+}
+
+    @IBAction func didTapRemoved(_ sender: UIButton) {
+
     }
 
 }
